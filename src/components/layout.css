@@ -14,12 +14,20 @@ a {
 }
 
 .Hero {
-  background-image: url("../images/wallpaper3.jpg");
+  background: url(../images/wallpaper3.jpg);
   height: 920px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
+
+.HeroGroup {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 150px 50px;
+  text-align: center;
+}
+
 .Hero h1 {
   margin: 0;
   color: white;
@@ -32,6 +40,7 @@ a {
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 .Hero p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 30px;
@@ -39,102 +48,35 @@ a {
   animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
   opacity: 0;
 }
+
 .Hero a {
   font-size: 17px;
   font-weight: 600;
   color: white;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 9px 20px;
-  border: 1px solid gba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.Hero a:hover {
-  background-color: white;
-  color: black;
-}
-.Hero svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.Hero .Logos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 40px;
-  margin: 100px 0;
-  justify-items: center;
-}
 
-.HeroGroup {
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 150px 50px;
-  text-align: center;
+.Hero a:hover {
+  background: white;
+  color: black;
 }
 
 @media (max-width: 640px) {
-  .Hero h1 {
-    font-size: 40px;
-  }
-  .Hero p {
-    font-size: 24px;
-  }
-  .Hero .Logos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .HeroGroup {
     padding: 100px 20px;
   }
-}
 
-/* Header */
-.Header {
-  position: fixed;
-  width: 100%;
-  padding: 50px 0;
-  z-index: 100;
-}
-.Header a {
-  color: white;
-  font-weight: 700;
-}
-.Header button {
-  padding: 8px 20px;
-  font-size: 20px;
-  background-color: #56ccf2;
-  border: none;
-  font-weight: 700;
-  border-radius: 10px;
-  outline: none;
-  cursor: pointer;
-  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.Header button:hover {
-  background-color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  transform: translateY(-3px);
-}
-.HeaderGroup {
-  max-width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  align-items: center;
-  justify-items: center;
-}
+  .Hero h1 {
+    font-size: 40px;
+  }
 
-@media (max-width: 640px) {
-  .Header {
-    padding: 15px 0;
-  }
-  .HeaderGroup {
-    grid-template-columns: repeat(4, aut o);
-  }
-  .Header a:nth-child(4) {
-    display: none;
+  .Hero p {
+    font-size: 24px;
   }
 }
 
@@ -146,6 +88,57 @@ a {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Cards h2 {
+  margin: 50px 20px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.CardGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1060px) {
+  .CardGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardGroup {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
